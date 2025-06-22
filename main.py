@@ -1,2 +1,5 @@
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("LibraryLake").getOrCreate()
 
-print("Hello from LibraryLake!")
+df = spark.read.csv('data/books.csv')
+
